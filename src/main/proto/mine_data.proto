@@ -1,0 +1,27 @@
+syntax = "proto2";
+
+package pre.mine.proto;
+
+message MineData {
+    message OneData {
+        optional int32 media_id = 1;
+        optional int32 vendor_id = 2;
+        optional int32 dsp_id = 3;
+        optional int32 advertiser_id = 4;
+    }
+
+    message TwoData {
+        optional int32 order_id = 1;
+        optional int32 dsp_id = 2;
+        optional int32 vendor_id = 3;
+
+    }
+
+    message ThreeData {
+        optional int32 ad_id = 1;
+        optional int32 adgroup_id = 2;
+    }
+    optional OneData dsp_data = 1;
+    optional TwoData ftx_data = 2;
+    optional ThreeData hs_data = 3;
+}
